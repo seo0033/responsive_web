@@ -1,0 +1,41 @@
+html{ font-size: 20px; }
+body{ font-size: 0.8rem; }
+
+.container{ display: flex; gap: 1.5rem; width: 1200px; margin: 0 auto; }
+
+header{ line-height: 5rem;}
+.gnb { background: #222; }
+.gnb>ul { gap: 30px; background: #fff; }
+.gnb>ul>li { flex: 1; text-align: center; }
+.gnb>ul>li~li { border-left: 1px solid #fff; }
+.gnb>ul>li>a { display: block; line-height: 2rem; text-align: center;}
+
+
+.step01 { padding: 100px 0; background: #f99; text-align: center; }
+.step01 h2{ font-size: 1.25rem; margin: 0 0 0.5em 0; }
+.step01 p{ font-size: 0.75rem; margin: 0 0 1.5rem 0; }
+
+.mbtn{ display: none; }
+
+@media screen and (max-width: 1200px){
+    .container{ width: auto; }
+    .step01 { background: #369; color: #fff; }
+}
+
+@media (max-width: 768px) {
+    .container{ padding: 0 0.75rem; }
+    .step01 { background: #ff9; color: #000; }
+}
+
+/* 768px : 패드사이즈 */
+
+@media (max-width: 560px) {
+    html{ font-size: 16px; }
+    .mbtn{ position: fixed; inset: 1rem 1rem auto auto; display: block; }
+    .gnb { position: absolute; display: none; background: #fff; }
+    .gnb>ul>li~li { border-left: none; border-top: 1px solid #333; }
+    .container{ flex-direction: column; }
+    .step01 { background: #9f9; }
+    .step01 h2{ font-size: 8vw; margin: 0 0 0.5em 0; }
+}
+/* vw : 화면비율에 따라 폰트사이즈 유지 */
